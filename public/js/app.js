@@ -107,6 +107,7 @@ contactForm.addEventListener("submit", (e) => {
     xhr.open("POST", '/');
     xhr.setRequestHeader('content-type', 'application/json');
     xhr.onload = function () {
+        console.log("message", xhr.responseText)
         if (xhr.responseText === 'Message sent successfully!') {
             successMessage.style.display = 'block';
             setTimeout(() => {
